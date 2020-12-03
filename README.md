@@ -5,5 +5,5 @@ FinalProject 1 : Mask_Detection_and_Auto_Wearning.pde
 * OpenCV for Java
 * Mask Detection if you wear a mask
 
-FinalProject 2 : Youtube_Video_Player.peds
+FinalProject 2 : Youtube_Video_Player.pde
 * Youtube Video Player similary
