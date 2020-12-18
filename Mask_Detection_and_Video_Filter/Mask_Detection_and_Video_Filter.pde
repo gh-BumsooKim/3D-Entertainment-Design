@@ -3,7 +3,9 @@ import gab.opencv.*;
 import java.awt.*;
 
 String isMask_text = "Mask Detection";
-PImage img;
+PImage img_mask;
+PImage img_nose;
+PImage img_thug;
 PFont font;
 Capture cam;
 OpenCV opencv;
@@ -15,7 +17,9 @@ void setup() {
 
   //font = createFont("");
   //textFont(font);
-  img = loadImage("custom-mask.png");
+  img_mask = loadImage("custom-mask2.png");
+  img_nose = loadImage("custom-nose.png");
+  img_thug = loadImage("thuglife_glasses.png");
   cam = new Capture(this, 640, 480);
   opencv = new OpenCV(this, 640, 480);
 
@@ -36,9 +40,9 @@ void captureEvent(Capture c) {
 
 void keyPressed() {
   // Mode 1 : FrontFace Tracking(Default)
-  if (key=='1' || key=='2') opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);
+  if (key=='1' || key=='2' || key=='3' || key=='4') opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);
   // Mode 2 : Eye Tracking
-  if (key=='3') opencv.loadCascade(OpenCV.CASCADE_EYE);
+  if (key=='5') opencv.loadCascade(OpenCV.CASCADE_EYE);
   // Mode 3 : Nose Tracking
-  if (key=='4') opencv.loadCascade(OpenCV.CASCADE_NOSE);
+  if (key=='6') opencv.loadCascade(OpenCV.CASCADE_NOSE);
 }
