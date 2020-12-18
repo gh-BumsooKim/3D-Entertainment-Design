@@ -11,23 +11,33 @@ void cv_mode() {
   faces = opencv.detect();
   char input_key = key;
 
-  switch(input_key) {  
-  // Mode 3
+  switch(input_key) {
+  // Mode 4 : Thug Life Glasses
+  case '4':
+    for (int i=0; i<faces.length; i++) {
+      image(img_thug, faces[i].x, faces[i].y+0.35*faces[i].height,
+        faces[i].width, faces[i].height*0.2);
+    }
+    break;
+    
+  // Mode 3 : Rudolph the Red-Nose
   case '3':
+    for (int i=0; i<faces.length; i++) {
+      image(img_nose, faces[i].x+0.1*faces[i].width+5, faces[i].y+0.5*faces[i].height-25,
+        faces[i].width*0.8, faces[i].height*0.5);
+    }
     break;
     
   // Mode 2 : Mask Video Filter
   case '2':
     for (int i=0; i<faces.length; i++) {
-      //image(img, faces[i].x+0.1*faces[i].width+5, faces[i].y+0.5*faces[i].height-25,
-      //  faces[i].width*0.8, faces[i].height*0.5);
-      image(img, faces[i].x+0.1*faces[i].width, faces[i].y+0.5*faces[i].height,
-        faces[i].width*0.8, faces[i].height*0.5);
+      image(img_mask, faces[i].x+0.1*faces[i].width, faces[i].y+0.5*faces[i].height,
+        faces[i].width*0.8, faces[i].height*0.45);
     }
     break;
     
   // Mode 1 : Mask Detection(Default)
-  case '1':
+  case '1':  
   default : 
     noFill();
     strokeWeight(3);
