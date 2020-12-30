@@ -6,9 +6,9 @@ Title 1 : Mask_Detection_and_Video_Filter.pde
 * Mask Detection if you wear a mask
 * Real-time Video Filter (Face Tracking)
 
-<p align="center"> Mode 1 : Mask Detection </p>
 <p align="center">
-  <img src="docs/Mode_1_Mask_Detection.png" width="70%" height="70%">
+  Mode 1 : Mask Detection <br><br>
+  <img src="docs/Mode_1_Mask_Detection.png" width="60%" height="60%">
 </p>
 
 <!--
